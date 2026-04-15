@@ -38,6 +38,17 @@ from agent_system.core.exceptions import (
     SessionNotFoundError,
 )
 from agent_system.core.logging import get_logger, logger
+from agent_system.core.resource_manager import (
+    ConnectionPool,
+    ManagedResource,
+    ResourceLeakError,
+    ResourceState,
+    ResourceTracker,
+    get_resource_stats,
+    graceful_shutdown,
+    managed_async_resource,
+    managed_sync_resource,
+)
 
 __all__ = [
     "AgentConfig",
@@ -73,4 +84,13 @@ __all__ = [
     "SessionNotFoundError",
     "get_logger",
     "logger",
+    "ManagedResource",
+    "ResourceState",
+    "ResourceLeakError",
+    "ResourceTracker",
+    "ConnectionPool",
+    "managed_sync_resource",
+    "managed_async_resource",
+    "graceful_shutdown",
+    "get_resource_stats",
 ]
